@@ -1,0 +1,17 @@
+{
+  "name": "playwright-qa-framework",
+  "version": "1.0.0",
+  "description": "Playwright + TypeScript test automation framework demo: Page Object Model, UI and API tests, CI, HTML reports",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --project=chromium tests/ui",
+    "test:api": "playwright test --project=api",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
