@@ -11,8 +11,10 @@ It demonstrates how I structure automation for real projects: maintainable page 
 | UI tests | Login, sorting, cart and end-to-end checkout against [saucedemo.com](https://www.saucedemo.com) (a public practice site) |
 | API tests | Schema, filtering, create and negative checks against [JSONPlaceholder](https://jsonplaceholder.typicode.com) |
 | Design | Page Object Model, custom fixtures (including a logged-in fixture), `data-test` selectors |
-| Reporting | HTML report, traces, screenshots and videos on failure |
-| CI | GitHub Actions: type-check, run tests, upload report artifact |
+| Reporting | Allure report (published to GitHub Pages) and Playwright HTML report, plus traces, screenshots and videos on failure |
+| CI | GitHub Actions: type-check, run tests, publish the latest Allure report |
+
+**Live test report:** https://suryam2498.github.io/playwright-qa-framework/
 
 ## Project structure
 
@@ -32,7 +34,8 @@ npx playwright install chromium
 npm test              # everything
 npm run test:ui       # UI only
 npm run test:api      # API only
-npm run report        # open the HTML report
+npm run report        # open the Playwright HTML report
+npm run allure:generate && npm run allure:open   # Allure report (needs Java)
 ```
 
 ## Design choices
